@@ -1,0 +1,157 @@
+/* ==== Reset Styles ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(270deg, #1e3c72, #2a5298, #00c6ff, #0072ff);
+  background-size: 600% 600%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ==== Header ==== */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: slideDown 1.5s ease forwards;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #ffdd57;
+  margin-bottom: 15px;
+  animation: slideUp 2s ease forwards;
+}
+
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  animation: fadeIn 3s ease;
+}
+
+/* ==== Main Content ==== */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Form styling */
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+form input,
+form textarea {
+  background: rgba(255,255,255,0.8);
+  color: #333;
+}
+
+form textarea {
+  height: 100px;
+  resize: none;
+}
+
+form button,
+form input[type="reset"] {
+  background: #ffdd57;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover,
+form input[type="reset"]:hover {
+  background: #ffb400;
+  transform: scale(1.05);
+}
+
+/* ==== Social Links ==== */
+header a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+header a:hover {
+  background: #ffdd57;
+  color: #111;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  margin-top: 40px;
+  font-size: 0.9rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* ==== Animations ==== */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  header h2 { font-size: 1.2rem; }
+  main { padding: 20px; }
+}
